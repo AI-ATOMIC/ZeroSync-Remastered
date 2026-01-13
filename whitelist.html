@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitelist Application | ZeroSync Remastered</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+</head>
+<body class="preload">
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <div class="loader-particle"></div>
+                <div class="loader-particle"></div>
+                <div class="loader-particle"></div>
+                <span>Z</span>
+                <span>S</span>
+            </div>
+            <div class="loader-text">
+                <div class="typewriter">
+                    <h3>LOADING WHITELIST APPLICATION</h3>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">ZERO<span class="logo-accent">SYNC</span></span>
+                    <span class="logo-subtitle">REMASTERED</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                <a href="whitelist.html" class="nav-link active"><i class="fas fa-file-signature"></i> Whitelist</a>
+                <a href="incity.html" class="nav-link"><i class="fas fa-city"></i> In-City</a>
+                <a href="jobs.html" class="nav-link"><i class="fas fa-briefcase"></i> Jobs</a>
+                <a href="gangs.html" class="nav-link"><i class="fas fa-skull-crossbones"></i> Gangs</a>
+                <a href="features.html" class="nav-link"><i class="fas fa-cogs"></i> Features</a>
+                <a href="community.html" class="nav-link"><i class="fas fa-users"></i> Community</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="https://discord.gg/F5ZpJdyJYe" class="btn-discord" target="_blank">
+                    <i class="fab fa-discord"></i> Join Discord
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Whitelist Header -->
+    <section class="page-header whitelist-header">
+        <div class="header-background">
+            <div class="gradient-overlay"></div>
+        </div>
+        
+        <div class="header-content">
+            <h1 class="page-title glitch" data-text="WHITELIST APPLICATION">WHITELIST APPLICATION</h1>
+            <p class="page-subtitle">Join our exclusive roleplay community</p>
+            <div class="process-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <span>Account</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <span>Personal</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <span>Roleplay</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <span>Review</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Whitelist Form -->
+    <section class="whitelist-form-section">
+        <div class="container">
+            <div class="form-container">
+                <form id="whitelistForm" class="whitelist-form">
+                    <!-- Step 1: Account Information -->
+                    <div class="form-step active" data-step="1">
+                        <h2 class="form-step-title">Account Information</h2>
+                        <p class="form-step-description">Connect your gaming accounts and basic information</p>
+                        
+                        <div class="form-group">
+                            <label for="discordUsername">
+                                <i class="fab fa-discord"></i> Discord Username
+                            </label>
+                            <input type="text" id="discordUsername" name="discordUsername" required 
+                                   placeholder="YourDiscord#1234">
+                            <div class="form-hint">Must be your exact Discord username including discriminator</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="fivemId">
+                                <i class="fas fa-gamepad"></i> FiveM ID / License
+                            </label>
+                            <input type="text" id="fivemId" name="fivemId" required 
+                                   placeholder="fivem:xxxxxxxxxxxxxxxx">
+                            <div class="form-hint">Find your FiveM ID in-game using the /license command</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="steamProfile">
+                                <i class="fab fa-steam"></i> Steam Profile URL
+                            </label>
+                            <input type="url" id="steamProfile" name="steamProfile" required 
+                                   placeholder="https://steamcommunity.com/id/yourprofile">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age">
+                                <i class="fas fa-birthday-cake"></i> Age
+                            </label>
+                            <input type="number" id="age" name="age" min="16" max="99" required 
+                                   placeholder="18">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" data-next-step="2">
+                                Next Step <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Personal Information -->
+                    <div class="form-step" data-step="2">
+                        <h2 class="form-step-title">Personal Information</h2>
+                        <p class="form-step-description">Tell us about yourself and your experience</p>
+                        
+                        <div class="form-group">
+                            <label for="fullName">
+                                <i class="fas fa-user"></i> Full Name
+                            </label>
+                            <input type="text" id="fullName" name="fullName" required 
+                                   placeholder="John Smith">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">
+                                <i class="fas fa-globe"></i> Country
+                            </label>
+                            <input type="text" id="country" name="country" required 
+                                   placeholder="Bangladesh">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timezone">
+                                <i class="fas fa-clock"></i> Timezone
+                            </label>
+                            <select id="timezone" name="timezone" required>
+                                <option value="" disabled selected>Select your timezone</option>
+                                <option value="GMT+6">GMT+6 (Bangladesh Standard Time)</option>
+                                <option value="GMT+5.5">GMT+5:30 (India Standard Time)</option>
+                                <option value="GMT+8">GMT+8 (Singapore Standard Time)</option>
+                                <option value="GMT+0">GMT+0 (UTC)</option>
+                                <option value="GMT-5">GMT-5 (Eastern Standard Time)</option>
+                                <option value="GMT-8">GMT-8 (Pacific Standard Time)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="playtime">
+                                <i class="fas fa-hourglass-half"></i> Average Daily Playtime
+                            </label>
+                            <select id="playtime" name="playtime" required>
+                                <option value="" disabled selected>Select your average playtime</option>
+                                <option value="1-2">1-2 hours</option>
+                                <option value="3-4">3-4 hours</option>
+                                <option value="5-6">5-6 hours</option>
+                                <option value="7+">7+ hours</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">
+                                <i class="fas fa-history"></i> FiveM Roleplay Experience
+                            </label>
+                            <textarea id="experience" name="experience" rows="4" required 
+                                      placeholder="Tell us about your previous FiveM roleplay experience..."></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" data-prev-step="1">
+                                <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button type="button" class="btn btn-primary" data-next-step="3">
+                                Next Step <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Roleplay Information -->
+                    <div class="form-step" data-step="3">
+                        <h2 class="form-step-title">Roleplay Information</h2>
+                        <p class="form-step-description">Describe your roleplay character and intentions</p>
+                        
+                        <div class="form-group">
+                            <label for="characterName">
+                                <i class="fas fa-user-ninja"></i> Character Name
+                            </label>
+                            <input type="text" id="characterName" name="characterName" required 
+                                   placeholder="James Henderson">
+                            <div class="form-hint">This will be your in-game character name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="characterBackstory">
+                                <i class="fas fa-book"></i> Character Backstory
+                            </label>
+                            <textarea id="characterBackstory" name="characterBackstory" rows="6" required 
+                                      placeholder="Write a detailed backstory for your character (minimum 200 characters)..."></textarea>
+                            <div class="char-counter">
+                                <span id="charCount">0</span> characters
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="characterGoals">
+                                <i class="fas fa-bullseye"></i> Character Goals & Ambitions
+                            </label>
+                            <textarea id="characterGoals" name="characterGoals" rows="4" required 
+                                      placeholder="What are your character's goals in the city?"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="rpStyle">
+                                <i class="fas fa-theater-masks"></i> Roleplay Style Preference
+                            </label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="rpStyle" value="serious">
+                                    <span class="checkbox-custom"></span>
+                                    Serious Roleplay
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="rpStyle" value="casual">
+                                    <span class="checkbox-custom"></span>
+                                    Casual Roleplay
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="rpStyle" value="criminal">
+                                    <span class="checkbox-custom"></span>
+                                    Criminal Roleplay
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="rpStyle" value="legal">
+                                    <span class="checkbox-custom"></span>
+                                    Legal Roleplay
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" data-prev-step="2">
+                                <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button type="button" class="btn btn-primary" data-next-step="4">
+                                Next Step <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Review & Submit -->
+                    <div class="form-step" data-step="4">
+                        <h2 class="form-step-title">Review & Submit</h2>
+                        <p class="form-step-description">Review your application before submission</p>
+                        
+                        <div class="review-section">
+                            <h3>Application Summary</h3>
+                            
+                            <div class="review-grid">
+                                <div class="review-item">
+                                    <span class="review-label">Discord Username:</span>
+                                    <span id="review-discord" class="review-value">-</span>
+                                </div>
+                                <div class="review-item">
+                                    <span class="review-label">FiveM ID:</span>
+                                    <span id="review-fivem" class="review-value">-</span>
+                                </div>
+                                <div class="review-item">
+                                    <span class="review-label">Full Name:</span>
+                                    <span id="review-name" class="review-value">-</span>
+                                </div>
+                                <div class="review-item">
+                                    <span class="review-label">Country:</span>
+                                    <span id="review-country" class="review-value">-</span>
+                                </div>
+                                <div class="review-item">
+                                    <span class="review-label">Character Name:</span>
+                                    <span id="review-character" class="review-value">-</span>
+                                </div>
+                                <div class="review-item">
+                                    <span class="review-label">Playtime:</span>
+                                    <span id="review-playtime" class="review-value">-</span>
+                                </div>
+                            </div>
+                            
+                            <div class="review-backstory">
+                                <h4>Character Backstory Preview</h4>
+                                <p id="review-backstory">-</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkbox-custom"></span>
+                                I agree to the <a href="#" class="terms-link">ZeroSync Rules & Guidelines</a>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <span class="checkbox-custom"></span>
+                                I agree to the <a href="#" class="terms-link">Privacy Policy</a>
+                            </label>
+                        </div>
+                        
+                        <div class="application-note">
+                            <div class="note-icon">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <p>After submission, your application will be reviewed by our administration team within 24-48 hours. You will receive a notification on Discord once a decision has been made.</p>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" data-prev-step="3">
+                                <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <i class="fas fa-paper-plane"></i> Submit Application
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Application Status -->
+                <div class="application-status" id="applicationStatus" style="display: none;">
+                    <div class="status-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Application Submitted!</h2>
+                    <p>Your whitelist application has been received successfully.</p>
+                    <p class="status-details">Application ID: <span id="appId">ZS-WL-2023-001</span></p>
+                    <div class="status-note">
+                        <p>You will receive a notification on Discord within 24-48 hours. Make sure to keep your Discord DMs open for our bot.</p>
+                    </div>
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Return to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-text">ZERO<span class="logo-accent">SYNC</span></span>
+                    <span class="logo-subtitle">REMASTERED</span>
+                </div>
+                <p class="footer-tagline">First Bangladesh Remastered Roleplay Server</p>
+                <div class="owner-credit">
+                    <span>Owner:</span>
+                    <span class="owner-name">Æ¡ 𝕬𝖙𝖔𝖒𝖎𝖈</span>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="whitelist.html">Whitelist</a>
+                <a href="incity.html">In-City</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="gangs.html">Gangs</a>
+                <a href="features.html">Features</a>
+                <a href="community.html">Community</a>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Community</h4>
+                <div class="social-icons">
+                    <a href="https://discord.gg/F5ZpJdyJYe" class="social-icon discord" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        <span>Discord</span>
+                        <div class="social-glow"></div>
+                    </a>
+                    <a href="https://www.facebook.com/6ZeroSync3" class="social-icon facebook" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                        <span>Facebook</span>
+                        <div class="social-glow"></div>
+                    </a>
+                    <a href="https://www.youtube.com/@6zerosync3" class="social-icon youtube" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                        <div class="social-glow"></div>
+                    </a>
+                </div>
+                <p class="footer-note">Join our growing community of roleplay enthusiasts</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 ZeroSync Remastered. All rights reserved. | FiveM Roleplay Server</p>
+            <p>This is a fictional server website for demonstration purposes.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/whitelist.js"></script>
+    <script src="js/particles.js"></script>
+</body>
+</html>
