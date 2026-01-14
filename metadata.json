@@ -1,0 +1,7 @@
+{
+  "name": "ZeroSync Remastered",
+  "description": "A high-quality, serious GTA V FiveM roleplay community focused on storytelling, immersion, and a community-first philosophy.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
